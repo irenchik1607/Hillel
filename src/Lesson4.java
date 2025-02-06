@@ -6,7 +6,6 @@ public class Lesson4 {
         //квадрат числа
         System.out.println("Введіть ціле число: ");
         int number = new Scanner(System.in).nextInt();
-
         int squareNumber = number*number;
         System.out.println("1) Квадрат числа " + number + " дорівнює " + squareNumber + ".\n");
 

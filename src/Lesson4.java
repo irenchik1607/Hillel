@@ -9,7 +9,6 @@ public class Lesson4 {
 
         int squareNumber = number*number;
         System.out.println("1) Квадрат числа " + number + " дорівнює " + squareNumber + ".\n");
-        //System.out.println("\n");
 
         //об"єм циліндра
         double cylinderRadius = 3.5;

@@ -51,12 +51,12 @@ public class Lesson5 {
 
     // Квадрат числа (задача 2)
     static String isPerfectSquare(int squareOfNumber) {
-        String message;
+
         for (int i = 1; i <= squareOfNumber; i++) {
             if (i * i == squareOfNumber)
-                return message = "true";
+                return "true";
         }
-        return message = "false";
+        return "false";
 
     }
 

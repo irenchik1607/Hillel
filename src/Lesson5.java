@@ -50,13 +50,13 @@ public class Lesson5 {
     }
 
     // Квадрат числа (задача 2)
-    static String isPerfectSquare(int squareOfNumber) {
+    static boolean isPerfectSquare(int squareOfNumber) {
 
         for (int i = 1; i <= squareOfNumber; i++) {
             if (i * i == squareOfNumber)
-                return "true";
+                return true;
         }
-        return "false";
+        return false;
 
     }
 
@@ -95,9 +95,9 @@ public class Lesson5 {
     }
 
     // Просте число (задача 5)
-    static String isPrime(int primeNumber) {
+    static boolean isPrime(int primeNumber) {
         if (primeNumber <= 1) {
-            return "false";
+            return false;
         }
 
         int remainderFromDivision;
@@ -110,9 +110,9 @@ public class Lesson5 {
         }
 
         if (sumOfReminder==2) {
-               return "true";
+               return true;
               } else {
-            return "false";
+            return false;
         }
     }
 

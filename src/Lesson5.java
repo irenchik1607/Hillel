@@ -3,32 +3,33 @@ import java.util.Scanner;
 public class Lesson5 {
     public static void main(String[] args) {
         System.out.println("Міша, обери задачу, рішення якої ти хотів би отримати. Можливі варіанти: 1, 2, 3, 4 або 5 :)");
-        int taskNumber = new Scanner(System.in).nextInt();
+        Scanner scan = new Scanner(System.in);
+        int taskNumber = scan.nextInt();
 
         switch (taskNumber) {
             case 1:
                 System.out.println("Будь ласка, вкажіть свій вік (повні роки):");
-                int age = new Scanner(System.in).nextInt();
+                int age = scan.nextInt();
                 System.out.println(checkAge(age));
                 break;
             case 2:
                 System.out.println("Введіть, будь ласка, ціле число");
-                int squareOfNumber = new Scanner(System.in).nextInt();
+                int squareOfNumber = scan.nextInt();
                 System.out.println(isPerfectSquare(squareOfNumber));
                 break;
             case 3:
                 System.out.println("Введіть, будь ласка, ціле число");
-                int number = new Scanner(System.in).nextInt();
+                int number = scan.nextInt();
                 System.out.println(calculateSumUpToN(number));
                 break;
             case 4:
                 System.out.println("Введіть, будь ласка, бал студента від 1 до 5 включно");
-                int mark = new Scanner(System.in).nextInt();
+                int mark = scan.nextInt();
                 System.out.println(getGrade(mark));
                 break;
             case 5:
                 System.out.println("Введіть, будь ласка, число, щоб перевірити чи є воно простим:");
-                int primeNumber = new Scanner(System.in).nextInt();
+                int primeNumber = scan.nextInt();
                 System.out.println(isPrime(primeNumber));
                 break;
             default:

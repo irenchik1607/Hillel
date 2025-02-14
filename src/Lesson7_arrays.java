@@ -3,11 +3,26 @@ import java.util.Scanner;
 
 public class Lesson7_arrays {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
-        int[] array = new int[30];
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введи кількість елементів масиву");
+        int numberOfElements = scanner.nextInt();
+        int[] array = new int[numberOfElements];
         for (int i = 0; i < array.length; i++) {
-            array[i] = i * 3;
+            System.out.println("Введи елемент масиву номер "+ (i+1));
+            array[i] = scanner.nextInt();
         }
+
+        //Перевірка наявності числа в масиві
+        System.out.println();
+        System.out.println("Введи ціле число для перевірки його значення у масиві");
+        int squareOfNumber = scanner.nextInt();
+        if (numberOfArray(array, squareOfNumber)) {
+            System.out.println("Число " + squareOfNumber + " є в масиві" + ".\n");
+        } else {
+            System.out.println("Число " + squareOfNumber + " відсутнє в масиві" + ".\n");
+        }
+
 
         // Обчислення середнього значення елементів в масиві чисел
         System.out.println("Середнє значення елементів в масиві чисел: " + averageValue(array) + ".\n");
@@ -17,14 +32,24 @@ public class Lesson7_arrays {
 
         // Виведення елементів масиву в зворотньому порядку.
         viceVersa(array);
+        System.out.println(".\n");
 
-        //Перевірка наявності числа в масиві
+    }
 
+    //Перевірка наявності числа в масиві
+    static boolean numberOfArray(int[] array, int squareOfNumber) {
+
+        for (int i = 0; i < array.length; i++) {
+            if (squareOfNumber == array[i]) {
+                return true;
+            }
+        }
+        return false;
     }
 
     // Обчислення середнього значення елементів в масиві чисел
     static double averageValue(int[] array) {
-        int sum = 0;
+        double sum = 0;
         double result;
         for (int i = 0; i < array.length; i++) {
             sum = sum + array[i];
@@ -36,7 +61,7 @@ public class Lesson7_arrays {
 
     // Максимальне значення серед елементів в масиві чисел
     static int maxValue(int[] array) {
-        int maxResult = 0;
+        int maxResult = array[0];
         for (int i = 0; i < array.length; i++) {
             if (maxResult < array[i]) {
                 maxResult = array[i];
@@ -48,7 +73,7 @@ public class Lesson7_arrays {
 
     // Мінімальне значення серед елементів в масиві чисел
     static int minValue(int[] array) {
-        int minResult = 0;
+        int minResult = array[0];
         for (int i = 0; i < array.length; i++) {
             if (minResult > array[i]) {
                 minResult = array[i];
@@ -65,4 +90,5 @@ public class Lesson7_arrays {
         }
         return array;
     }
+
 }

@@ -9,7 +9,7 @@ public class Lesson7_arrays {
         int numberOfElements = scanner.nextInt();
         int[] array = new int[numberOfElements];
         for (int i = 0; i < array.length; i++) {
-            System.out.println("Введи елемент масиву номер "+ (i+1));
+            System.out.println("Введи елемент масиву номер " + (i + 1));
             array[i] = scanner.nextInt();
         }
 
@@ -22,7 +22,6 @@ public class Lesson7_arrays {
         } else {
             System.out.println("Число " + squareOfNumber + " відсутнє в масиві" + ".\n");
         }
-
 
         // Обчислення середнього значення елементів в масиві чисел
         System.out.println("Середнє значення елементів в масиві чисел: " + averageValue(array) + ".\n");
@@ -58,7 +57,6 @@ public class Lesson7_arrays {
         return result;
     }
 
-
     // Максимальне значення серед елементів в масиві чисел
     static int maxValue(int[] array) {
         int maxResult = array[0];
@@ -69,7 +67,6 @@ public class Lesson7_arrays {
         }
         return maxResult;
     }
-
 
     // Мінімальне значення серед елементів в масиві чисел
     static int minValue(int[] array) {
@@ -82,7 +79,6 @@ public class Lesson7_arrays {
         return minResult;
     }
 
-
     // Виведення елементів масиву в зворотньому порядку.
     static int[] viceVersa(int[] array) {
         for (int i = array.length - 1; i >= 0; i--) {
@@ -90,5 +86,4 @@ public class Lesson7_arrays {
         }
         return array;
     }
-
 }

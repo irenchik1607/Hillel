@@ -37,7 +37,6 @@ public class Lesson7_arrays {
 
     //Перевірка наявності числа в масиві
     static boolean numberOfArray(int[] array, int squareOfNumber) {
-
         for (int i = 0; i < array.length; i++) {
             if (squareOfNumber == array[i]) {
                 return true;

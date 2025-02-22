@@ -20,7 +20,6 @@ public class Lection6_strings {
             System.out.println(subWordMethod(number, length, word));
         }
 
-
         //ДЗ 7.2. Заміксуємо рядки
         System.out.println("Введи перший рядок");
         String firstLine = scanner.nextLine();
@@ -28,7 +27,13 @@ public class Lection6_strings {
         String secondLine = scanner.nextLine();
         System.out.println(mixLine(firstLine, secondLine));
 
+        //ДЗ 7.3. Xyz у середині рядка
+        System.out.println("Введи рядок, що перевіримо на наявність xyz");
+        String stringLine = scanner.nextLine();
+        System.out.println(chekerXyz(stringLine));
+
     }
+
 
     //ДЗ 7.1. Рядок, створений з n повторень останніх n символів
     public static String subWordMethod(int number, int length, String word) {
@@ -74,7 +79,25 @@ public class Lection6_strings {
         return newLine.toString();
     }
 
+    //ДЗ 7.3. Xyz у середині рядка
+    public static boolean chekerXyz(String stringLine) {
+        int lengthXyz = stringLine.length();
+        if (stringLine.contains("xyz")) {
+            int indexXyz = stringLine.indexOf("xyz");
+            int postixXyz = lengthXyz - (indexXyz + 3);
+
+            if (indexXyz == postixXyz || (indexXyz - 1) == postixXyz || (indexXyz + 1) == postixXyz) {
+                return true;
+            } else
+                return false;
+        }
+        return false;
+
+    }
+
 }
+
+
 
 
 

@@ -59,16 +59,16 @@ public class Lection6_strings {
         }
 
         for (int i = 0; i < minLength; i++) {
-            newLine = newLine.append(firstLine.charAt(i)).append(secondLine.charAt(i));
+            newLine.append(firstLine.charAt(i)).append(secondLine.charAt(i));
         }
 
         if (lengthFirstLine > minLength) {
             firstLine = firstLine.substring(minLength);
-            newLine = newLine.append(firstLine);
+            newLine.append(firstLine);
         }
         if (lengthSecondLine > minLength) {
             secondLine = secondLine.substring(minLength);
-            newLine = newLine.append(secondLine);
+            newLine.append(secondLine);
         }
 
         return newLine.toString();

@@ -28,10 +28,14 @@ public class Lection6_strings {
         System.out.println(mixLine(firstLine, secondLine));
 
         //ДЗ 7.3. Xyz у середині рядка
-        System.out.println("Введи рядок, що перевіримо на наявність xyz");
+        System.out.println("Введи рядок, що перевіримо на наявність xyz у середині рядка");
         String stringLine = scanner.nextLine();
         System.out.println(chekerXyz(stringLine));
 
+        //ДЗ 7.4. ZipZap
+        System.out.println("Введи рядок (від 3 символів) для його перевірки на наявність шаблонів типу \"zip\" і \"zap\"");
+        String lineZipZap = scanner.nextLine();
+        System.out.println(findZipZapPattern(lineZipZap));
     }
 
 
@@ -94,7 +98,20 @@ public class Lection6_strings {
         return false;
 
     }
+    //ДЗ 7.4. ZipZap
+    public static String findZipZapPattern(String lineZipZap) {
+        int zipZapLength = lineZipZap.length();
+        if (zipZapLength < 3) {
+            return "Недостатньо символів у рядку";
+        } else {
+            String pattern = ".*z.p.*";
+            if (lineZipZap.matches(pattern)) {
+                return lineZipZap.replaceAll("z.p", "zp");
+            }
+        }
+        return "Рядок не має таких патернів";
 
+    }
 }
 
 

@@ -36,7 +36,13 @@ public class Lection6_strings {
         System.out.println("Введи рядок (від 3 символів) для його перевірки на наявність шаблонів типу \"zip\" і \"zap\"");
         String lineZipZap = scanner.nextLine();
         System.out.println(findZipZapPattern(lineZipZap));
+
+        //ДЗ 7.5. Xyz
+        System.out.println("Введи рядок (від 3 символів) для його перевірки на наявність \"xyz\" і крапки на початку цього патерну");
+        String lineXyz = scanner.nextLine();
+        System.out.println(dotXyz(lineXyz));
     }
+
 
 
     //ДЗ 7.1. Рядок, створений з n повторень останніх n символів
@@ -83,6 +89,7 @@ public class Lection6_strings {
         return newLine.toString();
     }
 
+
     //ДЗ 7.3. Xyz у середині рядка
     public static boolean chekerXyz(String stringLine) {
         int lengthXyz = stringLine.length();
@@ -97,7 +104,9 @@ public class Lection6_strings {
         }
         return false;
 
-    }
+       }
+
+
     //ДЗ 7.4. ZipZap
     public static String findZipZapPattern(String lineZipZap) {
         int zipZapLength = lineZipZap.length();
@@ -111,6 +120,17 @@ public class Lection6_strings {
         }
         return "Рядок не має таких патернів";
 
+    }
+
+
+    //ДЗ 7.5. Xyz
+    public static boolean dotXyz(String lineXyz) {
+
+        if (lineXyz.contains(".xyz")) {
+            return false;
+        } else if (lineXyz.contains("xyz")) {
+            return true;
+        } return false;
     }
 }
 

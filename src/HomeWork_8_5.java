@@ -20,12 +20,14 @@ public class HomeWork_8_5 {
         }
     }
 
-    public static int differenceLargestSmallest (int[] array, int numberOfArray){
+
+    public static int differenceLargestSmallest(int[] array, int numberOfArray) {
         int minValue = array[0];
         int maxValue = array[0];
         for (int i = 0; i < numberOfArray; i++) {
             minValue = Math.min(minValue, array[i]);
             maxValue = Math.max(maxValue, array[i]);
-        } return (maxValue-minValue);
+        }
+        return (maxValue - minValue);
     }
 }

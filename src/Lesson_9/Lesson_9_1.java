@@ -22,7 +22,7 @@ public class Lesson_9_1 {
         System.out.println("Ім\"я: " + secondPerson.getName() + ", Вік: " + secondPerson.getAge() + ", Професія: " + secondPerson.getProfession());
         System.out.println("Ім\"я: " + thirdPerson.getName() + ", Вік: " + thirdPerson.getAge() + ", Професія: " + thirdPerson.getProfession());
 
-
+        System.out.println();
         secondPerson.setProfession("Офіціантка");
 
         System.out.println("Ім\"я: " + firstPerson.getName() + ", Вік: " + firstPerson.getAge() + ", Професія: " + firstPerson.getProfession());

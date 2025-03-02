@@ -5,7 +5,11 @@ public class Person {
     int age;
     String profession;
 
-
+    public Person(String name, int age, String profession) {
+        this.name = name;
+        this.age = age;
+        this.profession = profession;
+    }
 
     public void setAge(int age) {
         this.age = age;
@@ -16,10 +20,10 @@ public class Person {
     }
 
     public void setProfession(String profession) {
-        this.profession = profession;
+       this.profession = profession;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
@@ -27,7 +31,7 @@ public class Person {
         return age;
     }
 
-    public String getProfession(){
+    public String getProfession() {
         return profession;
     }
 }

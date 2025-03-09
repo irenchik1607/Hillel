@@ -1,11 +1,11 @@
 package HomeWorwMisha1;
 
 public class Product {
-    public String nameOfGood;
-    public String codeOfGood;
-    public int priceOfGood;
-    public String descriptionOfGood;
-    public boolean availabilityOfGood;
+    private String nameOfGood;
+    private String codeOfGood;
+    private int priceOfGood;
+    private String descriptionOfGood;
+    private boolean availabilityOfGood;
 
 
     public void setCodeOfGood(String codeOfGood) {

@@ -1,9 +1,9 @@
 package Lesson_9;
 
 public class Person {
-    String name;
-    int age;
-    String profession;
+    protected String name;
+    protected int age;
+    protected String profession;
 
     public Person(String name, int age, String profession) {
         this.name = name;
@@ -34,4 +34,6 @@ public class Person {
     public String getProfession() {
         return profession;
     }
+
+
 }

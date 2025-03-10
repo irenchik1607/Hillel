@@ -1,14 +1,11 @@
 package Lesson_9;
 
-public class Man extends Person{
+public class Man extends Person {
 
-    public static final String MALE  = "Чоловік";
+    public static final String MALE = "Чоловік";
 
-    public Man(String MALE, String name, int age, String profession) {
-        super(name, age, profession);
+    public Man( String name, int age, PersonRole role) {
+        super(name, age, role);
     }
-
-    Man man = new Man("Чоловік", "Олександр", 40, "Водій");
-
 
 }

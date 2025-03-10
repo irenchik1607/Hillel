@@ -1,14 +1,14 @@
 package Lesson_9;
 
-public class Person {
+public class Person implements Displayable {
     protected String name;
     protected int age;
-    protected String profession;
+    protected PersonRole profession;
 
-    public Person(String name, int age, String profession) {
+    public Person(String name, int age, PersonRole role) {
         this.name = name;
         this.age = age;
-        this.profession = profession;
+        this.profession = role;
     }
 
     public void setAge(int age) {
@@ -19,8 +19,8 @@ public class Person {
         this.name = name;
     }
 
-    public void setProfession(String profession) {
-       this.profession = profession;
+    public void setProfession(PersonRole role) {
+        this.profession = role;
     }
 
     public String getName() {
@@ -31,9 +31,20 @@ public class Person {
         return age;
     }
 
-    public String getProfession() {
+    public PersonRole getProfession() {
         return profession;
     }
 
+    public void showInfoAboutPerson() {
+        String sex;
+        if (this instanceof Man) {
+            sex = Man.MALE;
+        } else {
+            sex = Woman.FEMALE;
+        }
+        System.out.println("Стать: " + sex + ", Ім\"я: " + this.name + ", Вік: " + this.age + ", Професія: " + this.profession);
 
+    }
+
+    ;
 }

@@ -3,19 +3,33 @@ package Lesson_9;
 public class Lesson_9_1 {
     public static void main(String[] args) {
 
-        Person firstPerson = new Person("Міша :)",35, "Айтішник :)");
-        Person secondPerson = new Person("Міла",20, "Балерина");
-        Person thirdPerson = new Person("Іванка",40, "Мама у декреті");
+//        Person firstPerson = new Person("Міша :)", 35, "Айтішник :)");
+//        Person secondPerson = new Person("Міла", 20, "Балерина");
+//        Person thirdPerson = new Person("Іванка", 40, "Мама у декреті");
+//
+//        System.out.println("Ім\"я: " + firstPerson.getName() + ", Вік: " + firstPerson.getAge() + ", Професія: " + firstPerson.getProfession());
+//        System.out.println("Ім\"я: " + secondPerson.getName() + ", Вік: " + secondPerson.getAge() + ", Професія: " + secondPerson.getProfession());
+//        System.out.println("Ім\"я: " + thirdPerson.getName() + ", Вік: " + thirdPerson.getAge() + ", Професія: " + thirdPerson.getProfession());
+//
+//        System.out.println();
+//        secondPerson.setProfession("Офіціантка");
+//
+//        System.out.println("Ім\"я: " + firstPerson.getName() + ", Вік: " + firstPerson.getAge() + ", Професія: " + firstPerson.getProfession());
+//        System.out.println("Ім\"я: " + secondPerson.getName() + ", Вік: " + secondPerson.getAge() + ", Професія: " + secondPerson.getProfession());
+//        System.out.println("Ім\"я: " + thirdPerson.getName() + ", Вік: " + thirdPerson.getAge() + ", Професія: " + thirdPerson.getProfession());
+//        System.out.println();
 
-        System.out.println("Ім\"я: " + firstPerson.getName() + ", Вік: " + firstPerson.getAge() + ", Професія: " + firstPerson.getProfession());
-        System.out.println("Ім\"я: " + secondPerson.getName() + ", Вік: " + secondPerson.getAge() + ", Професія: " + secondPerson.getProfession());
-        System.out.println("Ім\"я: " + thirdPerson.getName() + ", Вік: " + thirdPerson.getAge() + ", Професія: " + thirdPerson.getProfession());
+        //використовую інтерфейс + enum
+        Man man = new Man("Олександр", 40, PersonRole.DOCTOR);
+        man.showInfoAboutPerson();
 
-        System.out.println();
-        secondPerson.setProfession("Офіціантка");
+        Woman woman = new Woman("Мирося", 19, PersonRole.ARTIST);
+        woman.showInfoAboutPerson();
 
-        System.out.println("Ім\"я: " + firstPerson.getName() + ", Вік: " + firstPerson.getAge() + ", Професія: " + firstPerson.getProfession());
-        System.out.println("Ім\"я: " + secondPerson.getName() + ", Вік: " + secondPerson.getAge() + ", Професія: " + secondPerson.getProfession());
-        System.out.println("Ім\"я: " + thirdPerson.getName() + ", Вік: " + thirdPerson.getAge() + ", Професія: " + thirdPerson.getProfession());
+        woman.setProfession(PersonRole.TEACHER);
+        woman.showInfoAboutPerson();
+
+        man.setName("Павло");
+        man.showInfoAboutPerson();
     }
 }

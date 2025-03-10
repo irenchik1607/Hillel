@@ -20,6 +20,18 @@ public class Credit {
         this.numberOfMonths = numberOfMonths;
     }
 
+    public int getSumOfCredit() {
+        return sumOfCredit;
+    }
+
+    public int getNumberOfMonths() {
+        return numberOfMonths;
+    }
+
+    public double getAnnualRate() {
+        return annualRate;
+    }
+
     public Credit(int sumOfCredit, double annualRate, int numberOfMonths) {
         this.sumOfCredit = sumOfCredit;
         this.annualRate = annualRate;

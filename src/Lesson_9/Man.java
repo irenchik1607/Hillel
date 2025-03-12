@@ -8,4 +8,14 @@ public class Man extends Person {
         super(name, age, role);
     }
 
+    public void showInfoAboutPerson() {
+        String sex;
+        if (this instanceof Man) {
+            sex = Man.MALE;
+        } else {
+            return;
+        }
+        System.out.println("Стать: " + sex + ", Ім\"я: " + this.name + ", Вік: " + this.age + ", Професія: " + this.profession);
+
+    }
 }

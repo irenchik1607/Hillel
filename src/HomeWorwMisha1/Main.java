@@ -26,7 +26,14 @@ public class Main {
         Triangle triangle = new Triangle(10, 20, 20.5);
         System.out.println("Периметр трикутника складає: " + triangle.perimeterOfTriangle());
         System.out.println("Площа трикутника складає: " + triangle.areaOfTriangle());
+        System.out.println();
 
+        // клас Credit: розрахунок щомісячного платежу по кредиту
+        Credit credit = new Credit(100000,35,10);
+        System.out.println("Щомісяця необхідно будес плачувати " +String.format("%.1f", credit.annuityPayment()));
+        credit.setSumOfCredit(150000);
+        credit.setAnnualRate(50);
+        System.out.println("Щомісяця необхідно будес плачувати " +String.format("%.1f", credit.annuityPayment()));
     }
 
 

@@ -1,6 +1,6 @@
 package Lesson_9;
 
-public class Person implements Displayable {
+public abstract class Person implements Displayable {
     protected String name;
     protected int age;
     protected PersonRole profession;
@@ -23,6 +23,7 @@ public class Person implements Displayable {
         this.profession = role;
     }
 
+
     public String getName() {
         return name;
     }
@@ -36,15 +37,6 @@ public class Person implements Displayable {
     }
 
     public void showInfoAboutPerson() {
-        String sex;
-        if (this instanceof Man) {
-            sex = Man.MALE;
-        } else {
-            sex = Woman.FEMALE;
-        }
-        System.out.println("Стать: " + sex + ", Ім\"я: " + this.name + ", Вік: " + this.age + ", Професія: " + this.profession);
-
     }
 
-    ;
 }

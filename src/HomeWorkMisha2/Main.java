@@ -28,7 +28,6 @@ public class Main {
         rightAngledTriangle.perimeterOfFigure();
         System.out.println();
 
-
         // квадрат
         Square square = new Square(8);
         square.areaOfFigure();
@@ -47,15 +46,16 @@ public class Main {
         rectangle.perimeterOfFigure();
         System.out.println();
 
-
         // паралелограм
         Parallelogram parallelogram = new Parallelogram(10, 20, 15);
         parallelogram.areaOfFigure();
         parallelogram.perimeterOfFigure();
         System.out.println();
 
-
-        //    - трапеція
-
+        // трапеція
+        Trapeze trapeze = new Trapeze(10, 20, 15, 12, 12);
+        trapeze.areaOfFigure();
+        trapeze.perimeterOfFigure();
+        System.out.println();
     }
 }

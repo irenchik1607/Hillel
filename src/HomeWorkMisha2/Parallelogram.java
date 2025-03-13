@@ -2,19 +2,19 @@ package HomeWorkMisha2;
 
 public class Parallelogram extends Rhombus{
 
-    int secondSideParallelogram;
+    int secondLongSide;
 
-    public Parallelogram(int oneSide, int height, int secondSideParallelogram) {
+    public Parallelogram(int oneSide, int height, int secondLongSide) {
         super(oneSide, height);
-        this.secondSideParallelogram = secondSideParallelogram;
+        this.secondLongSide = secondLongSide;
     }
 
     public int getSecondSideParallelogram() {
-        return secondSideParallelogram;
+        return secondLongSide;
     }
 
-    public void setSecondSideParallelogram(int secondSideParallelogram) {
-        this.secondSideParallelogram = secondSideParallelogram;
+    public void setSecondSideParallelogram(int secondLongSide) {
+        this.secondLongSide = secondLongSide;
     }
 
     public void areaOfFigure() {
@@ -23,7 +23,7 @@ public class Parallelogram extends Rhombus{
     }
 
     public void perimeterOfFigure() {
-        perimeter = 2*oneSide + 2*secondSideParallelogram;
+        perimeter = 2*oneSide + 2*secondLongSide;
         System.out.println("Периметр паралелограма = " + perimeter);
     }
 }

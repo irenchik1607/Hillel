@@ -2,8 +2,6 @@ package HomeWorkMisha2;
 
 public class RightAngledTriangle extends Triangle {
 
-    int rightAngledPerimeter;
-    String rightAngledArea;
     public int secondSideB;
     public int thirdSideHypotenuse;
 
@@ -32,14 +30,14 @@ public class RightAngledTriangle extends Triangle {
     @Override
     public void perimeterOfFigure() {
 
-        rightAngledPerimeter = firstSideA + secondSideB + thirdSideHypotenuse;
-        System.out.println("Периметр прямокутного трикутника = " + rightAngledPerimeter);
+        perimeter = firstSideA + secondSideB + thirdSideHypotenuse;
+        System.out.println("Периметр прямокутного трикутника = " + perimeter);
         ;
     }
 
     public void areaOfFigure() {
-        rightAngledArea = String.format("%.2f", 0.5 * firstSideA * secondSideB);
-        System.out.println("Площа прямокутного трикутника = " + rightAngledArea);
+        area = 0.5 * firstSideA * secondSideB;
+        System.out.println("Площа прямокутного трикутника = " + area);
     }
 
 

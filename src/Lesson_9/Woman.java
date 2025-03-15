@@ -9,13 +9,7 @@ public class Woman extends Person {
     }
 
     public void showInfoAboutPerson() {
-        String sex;
-        if (this instanceof Woman) {
-            sex = Woman.FEMALE;
-        } else {
-            return;
-        }
-        System.out.println("Стать: " + sex + ", Ім\"я: " + this.name + ", Вік: " + this.age + ", Професія: " + this.profession);
+        System.out.println("Стать: " + FEMALE + ", Ім\"я: " + this.name + ", Вік: " + this.age + ", Професія: " + this.profession);
 
     }
 }

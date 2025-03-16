@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 
-public class Main {
+public class Home_13_1 {
     public static void main(String[] args) {
 
         String[] stringValues = {"12aqa34", "tiredLife","eva","eva"};

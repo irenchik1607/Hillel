@@ -7,7 +7,7 @@ public class Home_13_6 {
         //Приклад: Для списку [3, 1, 2, 2, 1, 2, 3, 3, 3],
         // очікуваний результат 3, оскільки він зустрічається найбільшу кількість разів.
 
-        List<Integer> massive = Arrays.asList(3, 1, 2, 2, 1, 2, 3, 3, 3);
+        List<Integer> massive = Arrays.asList(3, 1, 2, 2, 1, 2, 3, 3, 3, 2, 2, 1, 2);
         System.out.println(findNeededValue(massive));
     }
 

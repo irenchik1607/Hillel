@@ -7,18 +7,18 @@ public class Home_13_7 {
         //Приклад: Для LinkedHashSet A = [1, 2, 3, 4] та LinkedHashSet B = [3, 5, 6], очікуваний результат true.
         //Треба визначити, чи є спільні елементи в двох множинах.
 
-        Set<Integer> A = new LinkedHashSet<>(Arrays.asList(1, 2, 3, 4, 7));
-        Set<Integer> B = new LinkedHashSet<>(Arrays.asList(3, 5, 6));
-        System.out.println(presenceOfCommonElements(A, B));
+        Set<Integer> a = new LinkedHashSet<>(Arrays.asList(1, 2, 3, 4, 7));
+        Set<Integer> b = new LinkedHashSet<>(Arrays.asList(3, 5, 6));
+        System.out.println(presenceOfCommonElements(a, b));
     }
 
-    public static boolean presenceOfCommonElements(Set<Integer> A, Set<Integer> B) {
-        List<Integer> A1 = new ArrayList<>(A);
-        List<Integer> B1 = new ArrayList<>(B);
+    public static boolean presenceOfCommonElements(Set<Integer> a, Set<Integer> b) {
+        List<Integer> a1 = new ArrayList<>(a);
+        List<Integer> b1 = new ArrayList<>(b);
 
         boolean result = false;
-        for (int i = 0; i < A1.size(); i++) {
-            if (B1.contains(A1.get(i))) {
+        for (int i = 0; i < a1.size(); i++) {
+            if (b1.contains(a1.get(i))) {
                 result = true;
             }
         }

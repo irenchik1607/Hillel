@@ -6,6 +6,16 @@ public abstract class Person implements Displayable {
     protected PersonRole profession;
 
     public Person(String name, int age, PersonRole role) {
+        if (name == null||name.isEmpty()){
+            throw new MyException();
+        }
+
+        if (age<0){
+            throw new IllegalArgumentException ("Вік не може бути від'ємним");
+        }
+
+
+
         this.name = name;
         this.age = age;
         this.profession = role;
@@ -37,6 +47,7 @@ public abstract class Person implements Displayable {
     }
 
     public void showInfoAboutPerson() {
+
     }
 
 }

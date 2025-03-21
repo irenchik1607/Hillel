@@ -9,6 +9,7 @@ public class Man extends Person {
     }
 
     public void showInfoAboutPerson() {
+
         System.out.println("Стать: " + MALE + ", Ім\"я: " + this.name + ", Вік: " + this.age + ", Професія: " + this.profession);
     }
 }

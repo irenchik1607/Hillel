@@ -20,10 +20,10 @@ public class Lesson_9_1 {
 //        System.out.println();
 
         //використовую інтерфейс + enum
-        Man man = new Man("Олександр", 40, PersonRole.DOCTOR);
+        Man man = new Man("", 10, PersonRole.DOCTOR);
         man.showInfoAboutPerson();
 
-        Woman woman = new Woman("Мирося", 19, PersonRole.ARTIST);
+        Woman woman = new Woman("Мирося", 9, PersonRole.ARTIST);
         woman.showInfoAboutPerson();
 
         woman.setProfession(PersonRole.TEACHER);

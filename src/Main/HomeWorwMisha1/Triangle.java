@@ -1,4 +1,4 @@
-package Main.HomeWorwMisha1;
+package HomeWorwMisha1;
 
 public class Triangle {
     private double sideA;

@@ -1,4 +1,4 @@
-package Main.HomeWorkMisha2;
+package HomeWorkMisha2;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Main.Lesson_9;
+package Lesson_9;
 
 public class Woman extends Person {
     public static final String FEMALE  = "Жінка";

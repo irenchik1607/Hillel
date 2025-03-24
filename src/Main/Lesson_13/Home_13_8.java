@@ -1,4 +1,4 @@
-package Main.Lesson_13;
+package Lesson_13;
 
 import java.util.Arrays;
 import java.util.Set;

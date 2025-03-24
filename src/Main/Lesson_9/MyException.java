@@ -1,4 +1,4 @@
-package Main.Lesson_9;
+package Lesson_9;
 
 public class MyException extends RuntimeException {
     public MyException() {

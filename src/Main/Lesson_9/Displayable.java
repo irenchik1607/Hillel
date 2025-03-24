@@ -1,4 +1,4 @@
-package Main.Lesson_9;
+package Lesson_9;
 
 public interface Displayable {
     void showInfoAboutPerson();

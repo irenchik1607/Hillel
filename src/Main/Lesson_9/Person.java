@@ -1,4 +1,4 @@
-package Main.Lesson_9;
+package Lesson_9;
 
 public abstract class Person implements Displayable {
     protected String name;

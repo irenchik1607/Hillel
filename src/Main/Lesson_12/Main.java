@@ -1,4 +1,4 @@
-package Main.Lesson_12;
+package Lesson_12;
 
 import java.util.*;
 

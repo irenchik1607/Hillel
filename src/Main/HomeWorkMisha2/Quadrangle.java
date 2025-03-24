@@ -1,4 +1,4 @@
-package Main.HomeWorkMisha2;
+package HomeWorkMisha2;
 
 public abstract class Quadrangle extends MathematicFigure{
 

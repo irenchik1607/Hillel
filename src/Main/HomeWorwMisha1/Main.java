@@ -1,4 +1,4 @@
-package Main.HomeWorwMisha1;
+package HomeWorwMisha1;
 
 public class Main {
     public static void main(String[] args) {

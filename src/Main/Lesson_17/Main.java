@@ -24,7 +24,7 @@ public class Main {
                 System.out.println(group.getText());
             }
         } catch (Exception e) {
-            System.out.println("was exeption" + e.getMessage());
+            System.out.println("was exception" + e.getMessage());
             ;
         } finally {
             browser.quit();

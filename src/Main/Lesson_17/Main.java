@@ -23,6 +23,7 @@ public class Main {
             for (WebElement group : groupOfElements) {
                 System.out.println(group.getText());
             }
+            Thread.sleep(2000); //відстрочка
         } catch (Exception e) {
             System.out.println("was exception" + e.getMessage());
             ;

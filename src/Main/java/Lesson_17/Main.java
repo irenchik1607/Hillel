@@ -10,7 +10,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         WebDriver browser = new ChromeDriver();
-browser.manage().window().maximize();
+        browser.manage().window().maximize();
         try {
             // Runtime.getRuntime().addShutdownHook(new Thread(()->browser.quit()));
 

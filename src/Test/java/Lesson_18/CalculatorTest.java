@@ -69,6 +69,7 @@ public class CalculatorTest {
 
 
     @Test(
+
             dataProvider = "divideProvideMethod",
             description = "Перевірка ділення двох чисел",
             priority = 3
@@ -86,6 +87,7 @@ public class CalculatorTest {
     }
 
     @Test(
+
             dataProvider = "notValidDivideProvideMethod",
             description = "Перевірка ділення двох чисел",
             priority = 5

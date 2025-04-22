@@ -24,9 +24,9 @@ public class AssertsLesson {
 
         try {
             WebElement logotype = driver.findElement(By.cssSelector(Selectors.LOGO));
-            //boolean displayedLogo = logotype.isDisplayed();
+            boolean displayedLogo = logotype.isDisplayed();
             System.out.println("Логотип знайдено");
-            //Assert.assertTrue(displayedLogo, "Logo does not displayed");
+            Assert.assertTrue(displayedLogo, "Logo does not displayed");
         } catch (Exception e) {
             System.out.println("Логотип не відображається");
             Assert.fail("Logo does not displayed");

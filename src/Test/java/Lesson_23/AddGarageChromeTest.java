@@ -1,10 +1,16 @@
 package Lesson_23;
 
 import BaseTest.BasePageTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 public class AddGarageChromeTest extends BasePageTest {
 
@@ -15,7 +21,7 @@ public class AddGarageChromeTest extends BasePageTest {
     public void setUp() {
         super.setUp();
         driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
-        addGarageChrome = new AddGarageChrome(driver);
+        addGarageChrome = new AddGarageChrome(driver, "Q7","Audi" , 50);
     }
 
     @AfterMethod
@@ -23,6 +29,7 @@ public class AddGarageChromeTest extends BasePageTest {
         addGarageChrome = null;// щоб попередня сторінка не потрапила в наступний тест (зануляємо)
         super.tearDown();
     }
+
 
     @Test
     public void checkCorrectOpenedPage() {
@@ -34,15 +41,11 @@ public class AddGarageChromeTest extends BasePageTest {
     @Test
     public void checkBrandAndModalInfoTest() throws InterruptedException {
 
-        String miles = "50";
-        String brandName = "Audi";
-        String modalName = "Q7";
+        addGarageChrome.selectBrandAndModel();
+        addGarageChrome.fillMileageAndSendForm(addGarageChrome.getMilesFromInt());
 
-        addGarageChrome.selectBrandAndModel(brandName, modalName);
-        addGarageChrome.fillMileageAndSendForm(miles);
-
-        StringBuilder sb = new StringBuilder(brandName);
-        sb.append(" ").append(modalName);
+        StringBuilder sb = new StringBuilder(addGarageChrome.getBrandName());
+        sb.append(" ").append(addGarageChrome.getModalName());
         String expected = sb.toString();
 
         Assert.assertEquals(addGarageChrome.findResultInfoBrand(), expected);
@@ -52,17 +55,36 @@ public class AddGarageChromeTest extends BasePageTest {
     @Test
     public void checkCurrentDateInfoTest() throws InterruptedException {
 
-        String miles = "70";
-        String brandName = "BMW";
-        String modalName = "X6";
-
-        addGarageChrome.selectBrandAndModel(brandName, modalName);
-        addGarageChrome.fillMileageAndSendForm(miles);
+        addGarageChrome.selectBrandAndModel();
+        addGarageChrome.fillMileageAndSendForm(addGarageChrome.getMilesFromInt());
 
         String currentDate = addGarageChrome.getCurrentDate();
         String actualDate = addGarageChrome.onlyDateInfo();
+
         Assert.assertEquals(currentDate, actualDate);
     }
 
-    //Почати з 10 пункту першого ТК
+    @Test
+    public void checkResultInfoInInput() throws InterruptedException {
+
+        addGarageChrome.selectBrandAndModel();
+        addGarageChrome.fillMileageAndSendForm(addGarageChrome.getMilesFromInt());
+
+        Assert.assertEquals(addGarageChrome.checkMilesValue(), addGarageChrome.getMilesFromInt());
+    }
+
+    @Test
+    public void findCarLogo() throws InterruptedException {
+        addGarageChrome.selectBrandAndModel();
+        addGarageChrome.fillMileageAndSendForm(addGarageChrome.getMilesFromInt());
+        Assert.assertTrue(addGarageChrome.findLogo(), "Car logo is not displayed!");
+    }
+
+    @Test
+    public void srcInfo() throws InterruptedException {
+        String expected = "audi.png";
+        addGarageChrome.selectBrandAndModel();
+        addGarageChrome.fillMileageAndSendForm(addGarageChrome.getMilesFromInt());
+        Assert.assertEquals(addGarageChrome.endingOfImage(), expected);
+    }
 }

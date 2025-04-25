@@ -16,12 +16,33 @@ import java.time.format.DateTimeFormatter;
 
 public class AddGarageChrome extends BasePage {
     Actions actions = new Actions(driver);
-//    private String brandName= "Audi";
-//    private String modalName= "Q7";
+    private int miles;
+    private String modalName;
+    private String brandName;
+    private String milesFromInt;
 
+    public String getMilesFromInt() {
+        return milesFromInt;
+    }
 
-    public AddGarageChrome(WebDriver driver) {
+    public int getMiles() {
+        return miles;
+    }
+
+    public String getBrandName() {
+        return brandName;
+    }
+
+    public String getModalName() {
+        return modalName;
+    }
+
+    public AddGarageChrome(WebDriver driver, String modalName, String brandName, int miles) {
         super(driver);
+        this.modalName = modalName;
+        this.brandName = brandName;
+        this.miles = miles;
+        this.milesFromInt = String.valueOf(miles);
     }
 
 
@@ -49,17 +70,22 @@ public class AddGarageChrome extends BasePage {
     @FindBy(css = "p.car_update-mileage")
     private WebElement dateInfoOnScreen;
 
+    @FindBy(css = "input.update-mileage-form_input")
+    private WebElement inputWithValue;
 
-    public void selectBrandAndModel(String name, String model) throws InterruptedException {
+    @FindBy(css = "div.car_logo img.car-logo_img")
+    private WebElement logo;
+
+    public void selectBrandAndModel() throws InterruptedException {
 
         actions.click(guestLogInButton).build().perform();
         actions.click(addCarButton).build().perform();
 
         Select brand = new Select(selectBrand);
-        brand.selectByVisibleText(name);
+        brand.selectByVisibleText(brandName);
 
         Select carModel = new Select(selectModel);
-        carModel.selectByVisibleText(model);
+        carModel.selectByVisibleText(modalName);
         Thread.sleep(1000);
     }
 
@@ -86,11 +112,31 @@ public class AddGarageChrome extends BasePage {
         return currentDate.format(formatter);
     }
 
+
     public String onlyDateInfo() {
         StringBuilder sb = new StringBuilder(dateInfoOnScreen.getText());
         sb = sb.delete(0, 17);
         String actual = sb.toString();
         return actual;
+    }
+
+
+    public String checkMilesValue() {
+        String actual = inputWithValue.getDomProperty("value");
+        return actual;
+    }
+
+
+    public boolean findLogo (){
+    return logo.isDisplayed();
+    }
+
+
+    public String endingOfImage(){
+        String fullSrc = logo.getDomAttribute("src");
+        int sizeSrc = fullSrc.length();
+        String subSrc = fullSrc.substring(sizeSrc-8,sizeSrc);
+        return subSrc;
     }
 
 }

@@ -20,7 +20,7 @@ public class AddGarageChromeTest extends BasePageTest {
     @BeforeMethod
     public void setUp() {
         super.setUp();
-        driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
+//        driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
         addGarageChrome = new AddGarageChrome(driver, "Q7","Audi" , 50);
     }
 

@@ -72,14 +72,13 @@ public class AddGarage extends BasePage {
     @FindBy(css = "div.car_logo img.car-logo_img")
     private WebElement logo;
 
+
     public void selectBrandAndModel() throws InterruptedException {
 
         actions.click(guestLogInButton).build().perform();
         actions.click(addCarButton).build().perform();
-
         Select brand = new Select(selectBrand);
         brand.selectByVisibleText(brandName);
-
         Select carModel = new Select(selectModel);
         carModel.selectByVisibleText(modalName);
         Thread.sleep(1000);
@@ -89,7 +88,6 @@ public class AddGarage extends BasePage {
     public void fillMileageAndSendForm(String value) throws InterruptedException {
         inputMileage.clear();
         inputMileage.sendKeys(value);
-
         actions.click(addFormButton).build().perform();
         Thread.sleep(1000);
     }

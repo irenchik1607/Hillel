@@ -26,7 +26,9 @@ public class AddGarageTest extends BasePageTest {
 
     @Test
     public void checkCorrectOpenedPage() {
+
         String title = "Hillel Qauto";
+
         Assert.assertEquals(driver.getTitle(), title);
     }
 
@@ -68,16 +70,21 @@ public class AddGarageTest extends BasePageTest {
 
     @Test
     public void findCarLogo() throws InterruptedException {
+
         addGarageChrome.selectBrandAndModel();
         addGarageChrome.fillMileageAndSendForm(addGarageChrome.getMilesFromInt());
+
         Assert.assertTrue(addGarageChrome.findLogo(), "Car logo is not displayed!");
     }
 
     @Test
     public void srcInfo() throws InterruptedException {
+
         String expected = "audi.png";
+
         addGarageChrome.selectBrandAndModel();
         addGarageChrome.fillMileageAndSendForm(addGarageChrome.getMilesFromInt());
+
         Assert.assertEquals(addGarageChrome.endingOfImage(), expected);
     }
 }

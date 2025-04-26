@@ -1,27 +1,20 @@
 package Lesson_23;
 
 import BaseTest.BasePageTest;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
+public class AddGarageTest extends BasePageTest {
 
-public class AddGarageChromeTest extends BasePageTest {
-
-    private AddGarageChrome addGarageChrome;
-
+    private AddGarage addGarageChrome;
 
     @BeforeMethod
     public void setUp() {
         super.setUp();
 //        driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
-        addGarageChrome = new AddGarageChrome(driver, "Q7","Audi" , 50);
+        addGarageChrome = new AddGarage(driver, "Q7","Audi" , 50);
     }
 
     @AfterMethod

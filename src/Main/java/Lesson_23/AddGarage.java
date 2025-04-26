@@ -1,20 +1,16 @@
 package Lesson_23;
 
 import Base.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class AddGarageChrome extends BasePage {
+public class AddGarage extends BasePage {
     Actions actions = new Actions(driver);
     private int miles;
     private String modalName;
@@ -37,7 +33,7 @@ public class AddGarageChrome extends BasePage {
         return modalName;
     }
 
-    public AddGarageChrome(WebDriver driver, String modalName, String brandName, int miles) {
+    public AddGarage(WebDriver driver, String modalName, String brandName, int miles) {
         super(driver);
         this.modalName = modalName;
         this.brandName = brandName;

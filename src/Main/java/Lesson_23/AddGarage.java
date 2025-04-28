@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class AddGarage extends BasePage {
-    Actions actions = new Actions(driver);
+
     private int miles;
     private String modalName;
     private String brandName;
@@ -70,6 +70,8 @@ public class AddGarage extends BasePage {
     public String getModalName() {
         return modalName;
     }
+
+    Actions actions = new Actions(driver);
 
     public void selectBrandAndModel() throws InterruptedException {
 

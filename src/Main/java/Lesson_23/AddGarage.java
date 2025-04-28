@@ -17,31 +17,6 @@ public class AddGarage extends BasePage {
     private String brandName;
     private String milesFromInt;
 
-    public String getMilesFromInt() {
-        return milesFromInt;
-    }
-
-    public int getMiles() {
-        return miles;
-    }
-
-    public String getBrandName() {
-        return brandName;
-    }
-
-    public String getModalName() {
-        return modalName;
-    }
-
-    public AddGarage(WebDriver driver, String modalName, String brandName, int miles) {
-        super(driver);
-        this.modalName = modalName;
-        this.brandName = brandName;
-        this.miles = miles;
-        this.milesFromInt = String.valueOf(miles);
-    }
-
-
     @FindBy(css = "button.-guest")
     private WebElement guestLogInButton;
 
@@ -72,6 +47,29 @@ public class AddGarage extends BasePage {
     @FindBy(css = "div.car_logo img.car-logo_img")
     private WebElement logo;
 
+    public AddGarage(WebDriver driver, String modalName, String brandName, int miles) {
+        super(driver);
+        this.modalName = modalName;
+        this.brandName = brandName;
+        this.miles = miles;
+        this.milesFromInt = String.valueOf(miles);
+    }
+
+    public String getMilesFromInt() {
+        return milesFromInt;
+    }
+
+    public int getMiles() {
+        return miles;
+    }
+
+    public String getBrandName() {
+        return brandName;
+    }
+
+    public String getModalName() {
+        return modalName;
+    }
 
     public void selectBrandAndModel() throws InterruptedException {
 

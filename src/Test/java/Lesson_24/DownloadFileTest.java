@@ -23,7 +23,7 @@ public class DownloadFileTest extends BasePageTest {
     @BeforeMethod
     public void setUp() {
         super.setUp();
-//        driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
+        driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
         downloadFile = new DownloadFile(driver);
         String title = "Hillel Qauto";
         Assert.assertEquals(driver.getTitle(), title);
@@ -41,7 +41,7 @@ public class DownloadFileTest extends BasePageTest {
     public void downloadAudiInstructionTest() {
 
         downloadFile.downloadFrontWindshieldWipers();
-        File downloadFile = new File("C:\\Users\\irenc\\Documents\\Hillel\\src\\Test\\resources\\Downloads\\Front windshield wipers on Audi TT.pdf");
+        File downloadFile = new File("C:\\Users\\irenc\\Documents\\Hillel\\src\\Main\\resources\\Downloads\\Front windshield wipers on Audi TT.pdf");
         boolean exists = downloadFile.exists();
         System.out.println(exists);
 
@@ -50,7 +50,7 @@ public class DownloadFileTest extends BasePageTest {
     @Test
     public void allCarListTest() {
         downloadFile.allCars();
-        File downloadCarFile = new File("C:\\Users\\irenc\\Documents\\Hillel\\src\\Test\\resources\\Downloads\\car_list.txt");
+        File downloadCarFile = new File("C:\\Users\\irenc\\Documents\\Hillel\\src\\Main\\resources\\Downloads\\car_list.txt");
         boolean existsCarFile = downloadCarFile.exists();
         System.out.println(existsCarFile);
     }

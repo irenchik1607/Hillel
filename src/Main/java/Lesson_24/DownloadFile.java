@@ -50,7 +50,7 @@ public class DownloadFile extends BasePage {
         actions.click(guestLogInButton).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(instructionsButton)).click();
         actions.click(carSelect).build().perform();
-        File file = new File("C:\\Users\\irenc\\Documents\\Hillel\\src\\Test\\resources\\Downloads\\car_list.txt");
+        File file = new File("C:\\Users\\irenc\\Documents\\Hillel\\src\\Main\\resources\\Downloads\\car_list.txt");
 
         try (FileWriter writer = new FileWriter(file)){
 

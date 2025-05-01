@@ -9,7 +9,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 import static org.testng.Assert.*;
 
@@ -36,19 +38,22 @@ public class DownloadFileTest extends BasePageTest {
 
 
     @Test
-    public void downloadAudiInstructionTest(){
+    public void downloadAudiInstructionTest() {
 
         downloadFile.downloadFrontWindshieldWipers();
+        File downloadFile = new File("C:\\Users\\irenc\\Documents\\Hillel\\src\\Test\\resources\\Downloads\\Front windshield wipers on Audi TT.pdf");
+        boolean exists = downloadFile.exists();
+        System.out.println(exists);
 
     }
 
     @Test
-    public void allCarList()  {
+    public void allCarListTest() {
         downloadFile.allCars();
+        File downloadCarFile = new File("C:\\Users\\irenc\\Documents\\Hillel\\src\\Test\\resources\\Downloads\\car_list.txt");
+        boolean existsCarFile = downloadCarFile.exists();
+        System.out.println(existsCarFile);
     }
-
-
-
 
 
 }

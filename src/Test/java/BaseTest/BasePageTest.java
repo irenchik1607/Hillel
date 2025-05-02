@@ -1,5 +1,6 @@
 package BaseTest;
 
+import Config.Configuration;
 import Config.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,9 +20,7 @@ public class BasePageTest {
 
     public void setUp() {
 
-        HashMap<String, String> options = new HashMap<>();
-        options.put("download.default_directory", "C:\\Users\\irenc\\Documents\\Hillel\\src\\Main\\resources\\Downloads");
-        driver = DriverManager.getDriver("chrome", options);
+        driver = Configuration.getDriver();
     }
 
     @AfterMethod

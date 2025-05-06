@@ -1,6 +1,7 @@
 package Lesson_25;
 
 import Base.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -69,7 +70,7 @@ public class AllureReportAddCarPage extends BasePage {
     }
 
     Actions actions = new Actions(driver);
-
+@Step("Choosing a car brand and model in selects")
     public void selectBrandAndModel() throws InterruptedException {
 
         actions.click(addCarButton).build().perform();
@@ -80,7 +81,7 @@ public class AllureReportAddCarPage extends BasePage {
         Thread.sleep(1000);
     }
 
-
+    @Step("Filling in the input with \"miles\" and submitting the form")
     public void fillMileageAndSendForm(String value) throws InterruptedException {
         inputMileage.clear();
         inputMileage.sendKeys(value);
@@ -88,7 +89,7 @@ public class AllureReportAddCarPage extends BasePage {
         Thread.sleep(1000);
     }
 
-
+    @Step("Finding for resulting information by brand")
     public String findResultInfoBrand() {
         String actual = carInformationOnScreen.getText();
         return actual;
@@ -96,13 +97,14 @@ public class AllureReportAddCarPage extends BasePage {
 
 
     // Зідрала з чату метод
+    @Step("Getting the current date")
     public String getCurrentDate() {
         LocalDate currentDate = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         return currentDate.format(formatter);
     }
 
-
+    @Step("Finding the displayed date")
     public String onlyDateInfo() {
         StringBuilder sb = new StringBuilder(dateInfoOnScreen.getText());
         sb = sb.delete(0, 17);
@@ -110,18 +112,18 @@ public class AllureReportAddCarPage extends BasePage {
         return actual;
     }
 
-
+    @Step("Finding information on \"miles\"")
     public String checkMilesValue() {
         String actual = inputWithValue.getDomProperty("value");
         return actual;
     }
 
-
+    @Step("Finding a logo")
     public boolean findLogo() {
         return logo.isDisplayed();
     }
 
-
+    @Step("Finding the name of an image")
     public String endingOfImage() {
         String fullSrc = logo.getDomAttribute("src");
         int sizeSrc = fullSrc.length();

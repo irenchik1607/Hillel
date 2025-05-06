@@ -2,6 +2,7 @@ package Lesson_25;
 
 import BaseTest.BasePageTest;
 import Lesson_24.DownloadFile;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -32,13 +33,20 @@ public class AllureReportAddCarPageTest extends BasePageTest {
     }
 
     @Test
+    @Owner("Iryna Chyrkova")
+    @Description("Checking whether the required page is opened correctly")
+    @Link(name = "Allure Report lesson", url = "https://lms.ithillel.ua/groups/67406e2394b2c83dff14cbaf/homeworks/680fe3bdad66d86c0cff8a0a")
+    @Severity(SeverityLevel.NORMAL)
     public void checkCorrectOpenedPage() {
-
         String title = "Hillel Qauto";
         Assert.assertEquals(driver.getTitle(), title);
     }
 
     @Test
+    @Owner("Iryna Chyrkova")
+    @Description("Checking information about the brand and model of the car")
+    @Link(name = "Allure Report lesson", url = "https://lms.ithillel.ua/groups/67406e2394b2c83dff14cbaf/homeworks/680fe3bdad66d86c0cff8a0a")
+    @Severity(SeverityLevel.CRITICAL)
     public void checkBrandAndModalInfoTest() throws InterruptedException {
         allureReportLogInPage.clickLogInButton();
 
@@ -53,6 +61,10 @@ public class AllureReportAddCarPageTest extends BasePageTest {
 
 
     @Test
+    @Owner("Iryna Chyrkova")
+    @Description("Checking current date information")
+    @Link(name = "Allure Report lesson", url = "https://lms.ithillel.ua/groups/67406e2394b2c83dff14cbaf/homeworks/680fe3bdad66d86c0cff8a0a")
+    @Severity(SeverityLevel.CRITICAL)
     public void checkCurrentDateInfoTest() throws InterruptedException {
         allureReportLogInPage.clickLogInButton();
 
@@ -66,6 +78,10 @@ public class AllureReportAddCarPageTest extends BasePageTest {
     }
 
     @Test
+    @Owner("Iryna Chyrkova")
+    @Description("Checking information about the value of the input \"miles\"")
+    @Link(name = "Allure Report lesson", url = "https://lms.ithillel.ua/groups/67406e2394b2c83dff14cbaf/homeworks/680fe3bdad66d86c0cff8a0a")
+    @Severity(SeverityLevel.CRITICAL)
     public void checkResultInfoInInput() throws InterruptedException {
         allureReportLogInPage.clickLogInButton();
 
@@ -76,6 +92,10 @@ public class AllureReportAddCarPageTest extends BasePageTest {
     }
 
     @Test
+    @Owner("Iryna Chyrkova")
+    @Description("Checking the display of the car logo")
+    @Link(name = "Allure Report lesson", url = "https://lms.ithillel.ua/groups/67406e2394b2c83dff14cbaf/homeworks/680fe3bdad66d86c0cff8a0a")
+    @Severity(SeverityLevel.MINOR)
     public void findCarLogo() throws InterruptedException {
         allureReportLogInPage.clickLogInButton();
 
@@ -86,6 +106,10 @@ public class AllureReportAddCarPageTest extends BasePageTest {
     }
 
     @Test
+    @Owner("Iryna Chyrkova")
+    @Description("Check the car brand image")
+    @Link(name = "Allure Report lesson")
+    @Severity(SeverityLevel.MINOR)
     public void srcInfo() throws InterruptedException {
         allureReportLogInPage.clickLogInButton();
 

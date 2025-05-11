@@ -11,4 +11,9 @@ public interface Selectors {
     String DATE_INFO_ON_SCREEN = "p.car_update-mileage";
     String INPUT_WITH_VALUE = "input.update-mileage-form_input";
     String LOGO = "div.car_logo img.car-logo_img";
+    String SIGN_IN_BUTTON = "button.header_signin";
+    String EMAIL_INPUT = "signinEmail";
+    String PASSWORD_INPUT = "signinPassword";
+    String LOGIN_BUTTON = "div.justify-content-between button.btn-primary";
+    String ALLERT_MASSAGE = ".alert-danger";
 }

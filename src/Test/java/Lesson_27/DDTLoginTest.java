@@ -1,19 +1,20 @@
 package Lesson_27;
 
 import BaseTest.BasePageSelenideTest;
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import static org.testng.Assert.*;
 
 public class DDTLoginTest extends BasePageSelenideTest {
     private DDTLogin ddtLogin;
 
+    @Parameters({"browser"})
     @BeforeMethod
-    public void setUp() {
+    public void setUp(@Optional("chrome") String browser) {
+        this.browser = browser;
         super.setUp();
         ddtLogin = new DDTLogin();
     }

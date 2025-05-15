@@ -53,8 +53,6 @@ public class SelenideAddCarPage {
     }
 
 
-
-
     @Step("Choosing a car brand and model in selects")
     public void selectBrandAndModel() throws InterruptedException {
 

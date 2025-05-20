@@ -4,6 +4,7 @@ import BaseTest.BasePageTest;
 import Lesson_24.DownloadFile;
 import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
@@ -27,7 +28,7 @@ public class AllureReportAddCarPageTest  {
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
 
-        driver = new RemoteWebDriver(options);
+        driver = new ChromeDriver(options);
         driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
         downloadFile = new DownloadFile(driver);
         allureReportLogInPage = new AllureReportLogInPage(driver);

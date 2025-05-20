@@ -3,6 +3,9 @@ package Lesson_25;
 import BaseTest.BasePageTest;
 import Lesson_24.DownloadFile;
 import io.qameta.allure.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -10,15 +13,21 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
-public class AllureReportAddCarPageTest extends BasePageTest {
-
+public class AllureReportAddCarPageTest  {
+    private static WebDriver driver;
     private DownloadFile downloadFile;
     private  AllureReportLogInPage allureReportLogInPage;
     private  AllureReportAddCarPage allureReportAddCarPage;
 
     @BeforeMethod
     public void setUp() {
-        super.setUp();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+
+        driver = new RemoteWebDriver(options);
         driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
         downloadFile = new DownloadFile(driver);
         allureReportLogInPage = new AllureReportLogInPage(driver);
@@ -29,7 +38,7 @@ public class AllureReportAddCarPageTest extends BasePageTest {
     @AfterMethod
     public void tearDown() {
         downloadFile = null;// щоб попередня сторінка не потрапила в наступний тест (зануляємо)
-        super.tearDown();
+        driver.quit();
     }
 
     @Test

@@ -2,9 +2,9 @@
 
 <suite name="Selenide Tests - Grid" parallel="tests" thread-count="2">
     <test name="Chrome">
-        <parameter name="browser" value="chrome"/>
+<!--        <parameter name="browser" value="chrome"/>-->
         <classes>
-            <class name="Lesson_26.SelenideAddCarPageTest"/>
+            <class name="Lesson_25.AllureReportAddCarPageTest"/>
         </classes>
     </test>
 <!--    <test name="Firefox">-->

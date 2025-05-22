@@ -4,7 +4,7 @@
     <test name="Chrome">
 <!--        <parameter name="browser" value="chrome"/>-->
         <classes>
-            <class name="Lesson_25.AllureReportAddCarPageTest"/>
+            <class name="Lesson_30.ApiClasPageTest"/>
         </classes>
     </test>
 <!--    <test name="Firefox">-->

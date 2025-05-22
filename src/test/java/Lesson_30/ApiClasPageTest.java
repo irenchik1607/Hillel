@@ -1,16 +1,11 @@
 package Lesson_30;
 
-import ApiPage.ApiClassPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 
 public class ApiClasPageTest {
     SoftAssert softAssert = new SoftAssert();
@@ -26,7 +21,6 @@ public class ApiClasPageTest {
     @Test
     public void getBodyAndStatusCodTest() throws URISyntaxException, IOException, InterruptedException {
 
-
         String expectedBody = "{\"status\":\"ok\"}";
         int expectedStatusCode = 200;
 
@@ -38,7 +32,6 @@ public class ApiClasPageTest {
 
     @Test
     public void getBodyAndCodTask2Test() throws URISyntaxException, IOException, InterruptedException {
-
 
         String expectedBody1 = "\"id\":1";
         String expectedBody2 = "\"title\":\"Audi\"";
